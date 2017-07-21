@@ -1,4 +1,4 @@
-const API = require('./../static-api-generator')
+const API = require('static-api-generator')
 const api = new API({
   blueprint: 'data/:genre/:year/:movie',
   targetDirectory: 'output'
