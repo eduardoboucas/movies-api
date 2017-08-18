@@ -1,17 +1,17 @@
-const API = require('static-api-generator')
+const API = require('./../static-api-generator')
 const api = new API({
-  blueprint: 'data/:genre/:year/:movie',
+  blueprint: 'source/:language/:genre/:year/:movie',
   targetDirectory: 'output'
 })
 
-api.addEndpoint({
-  addIdToFiles: true,
-  depth: 1,
-  forEach: 'movie'
-})
-
-api.addEndpoint({
-  addIdToFiles: true,
-  depth: 2,
-  forEach: 'year'
+api.generate({
+  endpointsPerItem: ['movie'],
+  entriesPerPage: 3,
+  root: 'genre',
+  sort: {
+    movie: {
+      field: 'budget',
+      order: 'ascending'
+    }
+  }
 })
