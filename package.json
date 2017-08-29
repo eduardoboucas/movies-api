@@ -1,9 +1,6 @@
 {
   "name": "movies-api",
   "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
   "dependencies": {
     "deepmerge": "^1.5.0",
     "static-api-generator": "eduardoboucas/static-api-generator"
